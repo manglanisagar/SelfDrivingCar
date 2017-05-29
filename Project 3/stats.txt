@@ -1,0 +1,15 @@
+Convolutional layers have limited parameters and therefore require less regularization. Also, since the gradients here are averaged over the entire feature, it significantly reduces the effectiveness of using a dropout layer. Hence a dropout of 0.1 is used on the convolution layers. 
+
+The neurons in the fully connected layers, however, are quite suceptible to being overtrained and, therefore, I've applied the dropout of 0.5 to each layer.
+
+
+loss = [0.0183,0.0126,0.0109,0.0101,0.0092,0.0086,0.0081,0.0078,0.0074,0.0072]
+val_loss=[0.0121,0.0104,0.0101,0.0093,0.088,0.0092,0.0092,0.0102,0.0096,0.0096]
+
+Test loss = 0.0114
+
+
+loss = [0.0176,0.0126,0.0112,0.0102,0.0094]
+val_loss=[0.0120,0.0110,0.0100,0.009,0.0089]
+
+Test loss = 0.0081
